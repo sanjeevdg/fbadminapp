@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors")
 const route = process.env.PORT || 3000;
+require('dotenv').config();
 
 // import firebase-admin package
 const admin = require('firebase-admin');
