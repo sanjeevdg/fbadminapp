@@ -1,0 +1,25 @@
+{
+  "name": "fbadminapp",
+  "version": "1.0.0",
+  "description": "firebase admin app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "firebse",
+    "dmin",
+    "pp"
+  ],
+  "author": "sanjeev dasgupta",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
