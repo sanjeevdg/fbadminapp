@@ -8,7 +8,8 @@ const route = process.env.PORT || 3000;
 const admin = require('firebase-admin');
 
 // import service account file (helps to know the firebase project details)
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+  //require("./serviceAccountKey.json");
   //process.env.GOOGLE_APPLICATION_CREDENTIALS;
   
 
