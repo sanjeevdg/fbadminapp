@@ -13,7 +13,7 @@ const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 
 // Intialize the firebase-admin project/account
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS)
 });
 
 app.use(cors());
