@@ -15,10 +15,12 @@ console.log('typeof>>>',typeof process.env.GOOGLE_APPLICATION_CREDENTIALS);
 const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 console.log('processenv222222222222>>>>>',serviceAccount.private_key);
 
-serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
-serviceAccount.private_key = serviceAccount.private_key.replace(/\\+/g, "-");
+serviceAccount.private_key = serviceAccount.private_key.split(String.raw`\n`).join("\n");
+
+//serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+//serviceAccount.private_key = serviceAccount.private_key.replace(/\\+/g, "-");
 //serviceAccount.private_key = serviceAccount.private_key.replace(/\\\\//g, "_");
-serviceAccount.private_key = serviceAccount.private_key.replace(/\\=/g, "");  
+//serviceAccount.private_key = serviceAccount.private_key.replace(/\\=/g, "");  
 
 
 
