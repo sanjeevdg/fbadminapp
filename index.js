@@ -30,7 +30,7 @@ serviceAccount.private_key = serviceAccount.private_key.split(String.raw`\n`).jo
 
 // Intialize the firebase-admin project/account
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert({...serviceAccount,serviceAccount.private_key})
 });
 
 app.use(cors());
