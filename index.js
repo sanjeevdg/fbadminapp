@@ -108,7 +108,8 @@ app.post('/VerificationLink', jsonParser, async (req, res) => {
   })
  });
 })
-app.set('port', (process.env.PORT || 6000));
+app.set('port', (process.env.PORT || 6001));
 app.listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
+module.exports = app;
