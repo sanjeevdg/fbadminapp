@@ -87,7 +87,7 @@ app.post('/VerificationLink', jsonParser, async (req, res) => {
   const userData = req.body;
   console.log(userData);
   const actionCodeSettings = {
-    url: `http://localhost:3000/`,
+    url: `http://localhost:6000/`,
     handleCodeInApp: true,
     android: {
       packageName: 'com.yetnotherapp'
@@ -108,7 +108,7 @@ app.post('/VerificationLink', jsonParser, async (req, res) => {
   })
  });
 })
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 6000));
 app.listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
