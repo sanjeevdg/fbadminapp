@@ -9,21 +9,8 @@ require('dotenv').config();
 const admin = require('firebase-admin');
 
 // import service account file (helps to know the firebase project details)
-//// process.env.GOOGLE_APPLICATION_CREDENTIALS;
-const serviceAccount =  
-{
-  "type": "service_account",
-  "project_id": "yetanotherapp-c08f3",
-  "private_key_id": "aeeddba2dded5d0b241bc3a623dbafafdb19d9d0",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCy/PjGbm4aqIDu\n1sMirr1Qz0kAZ9TIuvr57ioeMItI9vyZb2wqfW68P0/RsQaMZpgHfF5kxfrINUs3\ntlFg6pImuVUvEhEOkaQ+yWaZXnaZwmn7zB16wQ3XJ4RQfD/eFVCZru31SxWqByyh\n9L3KmkBm6Q6BHyL1n2EsJHipQSuAxe1ZEdaQYNBbd/kWiM8ffXOf8YhQ0HGxdoE1\nHtQbtT0mEoGHIW6083RrFhsCi6Y3LgaocGNWZOc6YA6z5iFHKc27x7u91FgO1zrO\n3lsYx//ch+dfQX/zZEst80vjNGyDptiHy4odbyKCGI7OEzeDysNqx2Fb5ncCNAnd\ns4dkKlL9AgMBAAECggEAI0AVEqdvAcsL0X30YmE9oauhOfY4/utsQEq6esWeuNkD\nuIgsKlYXt/VUF/0gSAhwipDg2kHvePyd+rPqZQbtj7jSYPnS6CagzUjG7w+elfum\n+dMiPynEOwpqUZuWzHswK4Q7EyMdeiX9kUvtEPi+FEZz99QVA4DHF3V7WgIeujZr\nn/cuL2xQkAEwCjfYDwaXinwpbf63/72Ss5WVixqQTPtP7BkmIibhmK/tL+io9fdZ\nwLpmwpMgV/FjR6hjRtArJRkPr5PV0PZFQc7SfaVxYBAA43spr11sTSC6yjyDNCSK\nvwFDpDrxhCSNFAm8BTzThGujGlau75yuOkjnj+jBFQKBgQD4U/4eCNae+ElDocVI\nkSMqwhOWAcit/l67/Z3QGH+C5ok+frFmJoavXaNtZ8DESRCmdvMj672jC/lnyJc0\nwfgNeizwMucxguX15pMs/C7b/3TifCgS7NDLlJjuyS6nx5XpfKbO15RQzcH3yXa4\nRu41TfINs8WqtEQu5e0S082YEwKBgQC4hJM7XRrDwephDbUj7FWDYENNDAwbtvL9\nL5CLFvFZ3O2f8rKr9t8ZWz9FOHUkUpav8e/6l6jQpUrhNgKuu5c5PVYS6c2G7M+b\nL0JExd1UY0jo2g3MvC0KpUrlBq2d2LtKuecDt6bbzGA+qjDgINvTfN4QM3zInAMO\n2tWhq6rqrwKBgG69tjNaqatW+gUpHTuRTeeBiQ56WS4Oo9yd60SjyClt+YJfKWlu\ngN2vmnPtsu9VzhEONrusI3OUoXKA571lSuNnuqabbLKNt1ODsdp708HUGCHwUEaw\nSSSgbdr+6Ml1ngrzxce0J7YpK/j+ZO0k5JHs4qbtppbLsSRg8OpWffb1AoGAV7mA\nHjsXnHY3LklME3Yq+bjshlbx8sM6JzFT8SzJNkYZG3BRjfxi+TUukYRT/R7e0Wuf\nAm7ULc5IGWaKQ/Sf4vDMWVWbB0jTMx52zSedIJ/LbBkvcmUMrQEE6HoSVPdTpCVa\nNaQ8ykcSgvh7IDO/D39QPDeeXen+cjOMWb66FbUCgYB+4C4sOnzTmqlIzJUbKDC+\nLSAvGImSM0cQpdj7I1fWvLW2vXeoI+ISgkpDcN25qVSOajLuVSpq3OPGT5KKnirr\nKF8pnPrRHJNq/5Ao/MMpPF0496YgXysnpV3H5WHjzNnbIDNFKjbvHorzYfqDTm63\nGtnzU6J0Txm4IbeVI9dYvA==\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-40s0n@yetanotherapp-c08f3.iam.gserviceaccount.com",
-  "client_id": "109439515790696392614",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-40s0n%40yetanotherapp-c08f3.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-};
+//// 
+const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 
 serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
 serviceAccount.private_key = serviceAccount.private_key.replace(/\\+/g, "-");
