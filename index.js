@@ -10,6 +10,7 @@ const admin = require('firebase-admin');
 
 // import service account file (helps to know the firebase project details)
 //// 
+console.log('processenv>>>>>',process.env);
 const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 
 serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
