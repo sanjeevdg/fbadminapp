@@ -12,7 +12,7 @@ const admin = require('firebase-admin');
 //// 
 console.log('processenv1111111>>>>>',process.env.GOOGLE_APPLICATION_CREDENTIALS);
 console.log('typeof>>>',typeof process.env.GOOGLE_APPLICATION_CREDENTIALS);
-const serviceAccount = parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 console.log('processenv222222222222>>>>>',serviceAccount.private_key);
 
 serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
