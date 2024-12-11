@@ -26,9 +26,9 @@ const serviceAccount =
 };
 
 serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
-serviceAccount.private_key = serviceAccount.private_key.replace(/+/g, "-");
-serviceAccount.private_key = serviceAccount.private_key.replace(///g, "_");
-serviceAccount.private_key = serviceAccount.private_key.replace(/=/g, "");  
+serviceAccount.private_key = serviceAccount.private_key.replace(/\\+/g, "-");
+serviceAccount.private_key = serviceAccount.private_key.replace(/\\//g, "_");
+serviceAccount.private_key = serviceAccount.private_key.replace(/\\=/g, "");  
 
 
 
