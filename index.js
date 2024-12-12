@@ -16,6 +16,7 @@ const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 console.log('processenv222222222222>>>>>',serviceAccount.private_key);
 
 serviceAccount.private_key = serviceAccount.private_key.split(String.raw`\n`).join("\n");
+console.log('processenv33333333333>>>>>',serviceAccount.private_key);
 
 //serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
 //serviceAccount.private_key = serviceAccount.private_key.replace(/\\+/g, "-");
